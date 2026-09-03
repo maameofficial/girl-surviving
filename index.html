@@ -1,41 +1,154 @@
-<style>
-  /* 1996 Web Aesthetic */
-  body {
-    background-color: #0d0a14; /* Deep twilight indigo */
-    color: #d1c7e0; /* Soft ethereal violet text */
-    font-family: "Times New Roman", Times, Georgia, serif;
-    margin: 20px;
-    padding: 0;
-  }
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cocteau Twins / MAAME - Official Site</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    /* 1996 Minimalist White Aesthetic */
+    body {
+      background-color: #ffffff;
+      color: #111111;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      margin: 40px auto;
+      max-width: 720px;
+      padding: 0 20px;
+      line-height: 1.5;
+    }
 
-  /* Retro Links */
-  a:link { color: #8e94f2; text-decoration: underline; }
-  a:visited { color: #6c5ce7; }
-  a:hover { color: #e0aaff; background-color: #1a1528; }
+    /* Minimalist Centered Header */
+    .header-box {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-  /* Table Grid Layout */
-  table.retro-layout {
-    width: 780px;
-    margin: 0 auto;
-    border: 2px ridge #4a3b69;
-    background-color: #130f1e;
-    padding: 15px;
-  }
+    h1 {
+      font-size: 28px;
+      font-weight: normal;
+      letter-spacing: 4px;
+      margin-bottom: 5px;
+    }
 
-  /* Scrolling Announcement Marquee */
-  marquee {
-    background-color: #1f1830;
-    color: #e0aaff;
-    border: 1px solid #4a3b69;
-    padding: 4px;
-    font-size: 14px;
-  }
+    .date-stamp {
+      font-size: 13px;
+      color: #555555;
+      font-style: italic;
+    }
 
-  /* Audio & Media Containers */
-  .media-box {
-    border: 1px inset #4a3b69;
-    padding: 10px;
-    background-color: #0a0810;
-    margin-top: 10px;
-  }
-</style>
+    /* Retro Navigation Bar */
+    .nav-bar {
+      text-align: center;
+      font-size: 14px;
+      margin: 15px 0;
+      padding: 6px 0;
+      border-top: 1px solid #999999;
+      border-bottom: 1px solid #999999;
+    }
+
+    /* Classic Web 1.0 Links */
+    a:link { color: #0000cc; text-decoration: underline; }
+    a:visited { color: #551a8b; }
+    a:hover { color: #ff0000; }
+
+    /* Content Sections */
+    .section-title {
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-top: 25px;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #cccccc;
+      margin: 20px 0;
+    }
+
+    /* Simple Table Grid for Releases/Demos */
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    table.data-table td {
+      padding: 6px 4px;
+      vertical-align: top;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666666;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header-box">
+    <h1>M A A M E</h1>
+    <div class="date-stamp">Last updated: November 25, 1996</div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav-bar">
+    [ <a href="#news">NEWS</a> ] &nbsp;
+    [ <a href="#about">BIOGRAPHY</a> ] &nbsp;
+    [ <a href="#discography">DISCOGRAPHY</a> ] &nbsp;
+    [ <a href="#contact">CONTACT</a> ]
+  </div>
+
+  <!-- News Section -->
+  <a name="news"></a>
+  <div class="section-title">LATEST NEWS</div>
+  <p>
+    Welcome to the official web page. Work continues on upcoming acoustic recordings and vocal track arrangements for the <i>Surviving</i> project.
+  </p>
+
+  <hr>
+
+  <!-- Biography Section -->
+  <a name="about"></a>
+  <div class="section-title">BIOGRAPHY</div>
+  <p>
+    MAAME is an independent lead singer and songwriter based in the UK, combining pop, soul, and atmospheric R&B soundscapes with textured vocal layers and acoustic arrangements.
+  </p>
+
+  <hr>
+
+  <!-- Discography Section -->
+  <a name="discography"></a>
+  <div class="section-title">DISCOGRAPHY & TRACKS</div>
+  
+  <table class="data-table">
+    <tr>
+      <td width="30%"><b>Surviving</b></td>
+      <td width="20%">Acoustic Demo</td>
+      <td width="50%"><audio controls style="height: 30px; width: 100%;"><source src="audio/surviving.mp3" type="audio/mpeg"></audio></td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <!-- Contact Section -->
+  <a name="contact"></a>
+  <div class="section-title">EXTERNAL LINKS</div>
+  <p>
+    Official streaming profiles and external archives:<br>
+    &bull; <a href="https://spotify.com" target="_blank">Spotify Profile</a><br>
+    &bull; <a href="https://apple.com" target="_blank">Apple Music Profile</a><br>
+    &bull; <a href="https://youtube.com" target="_blank">YouTube Channel</a>
+  </p>
+
+  <!-- Footer -->
+  <div class="footer">
+    <hr>
+    &copy; 1996-2026 MAAME. All rights reserved.<br>
+    Best viewed with Netscape Navigator or Internet Explorer.
+  </div>
+
+</body>
+</html>
