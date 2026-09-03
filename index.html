@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>MAAME - Official Archive</title>
-  <link rel="icon" type="image/png" href="favicon.png">
   <style>
-    /* Classic 1996 Minimal Aesthetic */
-    body {
+    /* Full screen centering container */
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
       background-color: #ffffff;
       color: #111111;
       font-family: "Times New Roman", Times, Georgia, serif;
-      margin: 40px auto;
-      max-width: 680px;
-      padding: 0 20px;
-      line-height: 1.6;
+      
+      /* Flexbox centering */
+      display: flex;
+      justify-content: center; /* Horizontally center */
+      align-items: center;     /* Vertically center */
+      text-align: center;
     }
 
     /* Custom Header Font Setup */
@@ -22,129 +26,54 @@
       src: url('custom-font.ttf') format('truetype');
     }
 
+    .header-container {
+      max-width: 600px;
+      padding: 20px;
+    }
+
     .header-title {
       font-family: 'HeaderFont', "Times New Roman", serif;
-      font-size: 42px;
-      text-align: center;
-      margin-bottom: 0;
-      letter-spacing: 2px;
+      font-size: 52px;
+      margin: 0;
+      letter-spacing: 4px;
     }
 
     .sub-header {
-      text-align: center;
       font-style: italic;
       color: #555555;
-      font-size: 14px;
-      margin-top: 5px;
+      font-size: 15px;
+      margin-top: 10px;
       margin-bottom: 25px;
     }
 
-    /* Retro Navigation Bar */
-    .nav-table {
-      width: 100%;
+    /* Retro Nav Box */
+    .nav-box {
       border-top: 1px solid #111111;
       border-bottom: 1px solid #111111;
-      margin-bottom: 30px;
-      padding: 6px 0;
-      text-align: center;
+      padding: 10px 0;
       font-size: 13px;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
     }
 
-    /* Vintage Red Links */
     a:link { color: #cc0000; text-decoration: underline; }
     a:visited { color: #880000; }
-    a:hover { color: #000000; background-color: #f5f5f5; }
-
-    /* Content Cards / Tables */
-    .section-title {
-      font-weight: bold;
-      font-size: 15px;
-      letter-spacing: 1px;
-      border-bottom: 1px dotted #999999;
-      padding-bottom: 4px;
-      margin-top: 30px;
-    }
-
-    .track-list {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    .track-list td {
-      padding: 8px 4px;
-      vertical-align: middle;
-    }
-
-    /* Footer Stamp */
-    .footer {
-      text-align: center;
-      font-size: 11px;
-      color: #777777;
-      margin-top: 50px;
-      border-top: 1px solid #eeeeee;
-      padding-top: 15px;
-    }
+    a:hover { color: #000000; }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <h1 class="header-title">M A A M E</h1>
-  <div class="sub-header">surviving &bull; last updated: November 25th</div>
+  <div class="header-container">
+    <!-- Centered Title -->
+    <h1 class="header-title">M A A M E</h1>
+    <div class="sub-header">surviving &bull; last updated: November 25th</div>
 
-  <!-- Navigation -->
-  <table class="nav-table">
-    <tr>
-      <td><a href="#news">NEWS</a></td>
-      <td><a href="#bio">BIOGRAPHY</a></td>
-      <td><a href="#music">DISCOGRAPHY</a></td>
-      <td><a href="#links">CONNECT</a></td>
-    </tr>
-  </table>
-
-  <!-- News Section -->
-  <a name="news"></a>
-  <div class="section-title">LATEST ANNOUNCEMENT</div>
-  <p>
-    Welcome to the archive. Work is currently underway on acoustic demos and upcoming vocal track sessions for the <i>Surviving</i> project.
-  </p>
-
-  <!-- Bio Section -->
-  <a name="bio"></a>
-  <div class="section-title">BIOGRAPHY</div>
-  <p>
-    Independent lead singer and songwriter based in the UK, blending pop, soul, R&B, and balladry into atmospheric soundscapes built around raw vocal resonance.
-  </p>
-
-  <!-- Audio Tracks Section -->
-  <a name="music"></a>
-  <div class="section-title">AUDIO DEMOS</div>
-  <table class="track-list">
-    <tr>
-      <td width="35%"><b>Surviving</b> (Acoustic)</td>
-      <td width="65%">
-        <audio controls style="width: 100%; height: 30px;">
-          <source src="surviving-demo.mp3" type="audio/mpeg">
-        </audio>
-      </td>
-    </tr>
-  </table>
-
-  <!-- External Links -->
-  <a name="links"></a>
-  <div class="section-title">EXTERNAL LINKS</div>
-  <p>
-    &bull; <a href="https://spotify.com" target="_blank">Spotify Profile</a><br>
-    &bull; <a href="https://apple.com" target="_blank">Apple Music Profile</a><br>
-    &bull; <a href="https://youtube.com" target="_blank">YouTube Channel</a>
-  </p>
-
-  <!-- Footer -->
-  <div class="footer">
-    &copy; 1996-2026 MAAME. Hosted via GitHub Pages.
+    <!-- Navigation Below Title -->
+    <div class="nav-box">
+      [ <a href="#news">NEWS</a> ] &nbsp;&nbsp;
+      [ <a href="#bio">BIOGRAPHY</a> ] &nbsp;&nbsp;
+      [ <a href="#music">DISCOGRAPHY</a> ] &nbsp;&nbsp;
+      [ <a href="#links">CONNECT</a> ]
+    </div>
   </div>
 
 </body>
