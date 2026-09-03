@@ -2,252 +2,149 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>MAAME - Official Site</title>
+  <title>MAAME - Official Archive</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
-    /* 1996 White Aesthetic */
+    /* Classic 1996 Minimal Aesthetic */
     body {
       background-color: #ffffff;
-      color: #000000;
+      color: #111111;
       font-family: "Times New Roman", Times, Georgia, serif;
-      margin: 0;
-      padding: 20px;
+      margin: 40px auto;
+      max-width: 680px;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+
+    /* Custom Header Font Setup */
+    @font-face {
+      font-family: 'HeaderFont';
+      src: url('custom-font.ttf') format('truetype');
+    }
+
+    .header-title {
+      font-family: 'HeaderFont', "Times New Roman", serif;
+      font-size: 42px;
       text-align: center;
-    }
-
-    /* Main Container */
-    .container {
-      max-width: 750px;
-      margin: 0 auto;
-    }
-
-    /* Header Logo Area */
-    .logo-container {
-      margin-top: 10px;
-      margin-bottom: 30px;
-    }
-
-    .logo-title {
-      font-size: 48px;
-      font-family: "Brush Script MT", "Gabriola", "Times New Roman", cursive, serif;
-      font-weight: normal;
-      font-style: italic;
+      margin-bottom: 0;
       letter-spacing: 2px;
-      margin: 0;
-      color: #1a1a1a;
     }
 
-    .logo-subtitle {
-      font-size: 16px;
-      font-family: "Times New Roman", serif;
-      letter-spacing: 5px;
-      color: #5b648c; /* Purple/lavender hue */
-      margin-top: -8px;
-    }
-
-    /* Visual Content Area Layout */
-    .splash-layout {
-      position: relative;
-      width: 600px;
-      height: 320px;
-      margin: 0 auto;
-    }
-
-    /* Left Icon / Graphic Placeholder */
-    .left-graphic {
-      position: absolute;
-      left: 40px;
-      top: 20px;
-      width: 130px;
-    }
-
-    .red-sphere {
-      width: 100px;
-      height: 100px;
-      background: radial-gradient(circle, #cc3333 0%, #880000 70%, transparent 100%);
-      border-radius: 50%;
-      margin: 0 auto;
-      opacity: 0.85;
-    }
-
-    /* Vertical Navigation List with Connecting Lines */
-    .left-nav {
-      margin-top: 15px;
-      text-align: left;
-      font-size: 15px;
-      font-style: italic;
-    }
-
-    .left-nav-item {
-      margin: 6px 0;
-      position: relative;
-      padding-left: 20px;
-    }
-
-    .left-nav-item::before {
-      content: "";
-      position: absolute;
-      left: 5px;
-      top: -10px;
-      width: 1px;
-      height: 18px;
-      background-color: #cc0000;
-    }
-
-    .circled-letter {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      border: 1px solid #cc0000;
-      border-radius: 50%;
+    .sub-header {
       text-align: center;
-      line-height: 16px;
-      font-size: 12px;
-      font-style: normal;
-      color: #cc0000;
-    }
-
-    /* Center Artwork Graphic Placeholder */
-    .center-artwork {
-      position: absolute;
-      left: 200px;
-      top: 10px;
-      width: 200px;
-      height: 250px;
-      background-color: #e6e3f0;
-      border: 1px solid #d0cce0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #7b7393;
       font-style: italic;
-    }
-
-    /* Right Oval Button Navigation Overlay */
-    .right-nav {
-      position: absolute;
-      right: 50px;
-      top: 20px;
-      width: 220px;
-    }
-
-    .oval-btn {
-      display: block;
-      width: 130px;
-      padding: 4px 12px;
-      margin: 8px auto;
-      border: 1px solid #c5b358; /* Vintage gold outline */
-      border-radius: 20px;
-      background-color: rgba(255, 255, 255, 0.85);
-      color: #000000;
-      text-decoration: none;
-      font-weight: bold;
+      color: #555555;
       font-size: 14px;
-      letter-spacing: 2px;
-      box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+      margin-top: 5px;
+      margin-bottom: 25px;
     }
 
-    .oval-btn:hover {
-      background-color: #fffdf0;
-      border-color: #cc0000;
-      color: #cc0000;
-    }
-
-    /* Center Sub-banner Tagline */
-    .tagline {
-      margin-top: 30px;
-      font-size: 18px;
-      color: #333333;
-    }
-
-    .tagline a {
-      color: #cc0000;
-      text-decoration: underline;
-    }
-
-    /* Footer Links Section */
-    .footer-nav {
-      margin-top: 50px;
+    /* Retro Navigation Bar */
+    .nav-table {
+      width: 100%;
+      border-top: 1px solid #111111;
+      border-bottom: 1px solid #111111;
+      margin-bottom: 30px;
+      padding: 6px 0;
+      text-align: center;
       font-size: 13px;
+      letter-spacing: 1px;
     }
 
-    .footer-nav a {
-      color: #cc0000;
-      text-decoration: underline;
-      margin: 0 4px;
+    /* Vintage Red Links */
+    a:link { color: #cc0000; text-decoration: underline; }
+    a:visited { color: #880000; }
+    a:hover { color: #000000; background-color: #f5f5f5; }
+
+    /* Content Cards / Tables */
+    .section-title {
+      font-weight: bold;
+      font-size: 15px;
+      letter-spacing: 1px;
+      border-bottom: 1px dotted #999999;
+      padding-bottom: 4px;
+      margin-top: 30px;
     }
 
-    .footer-meta {
-      margin-bottom: 8px;
-      color: #333333;
+    .track-list {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .track-list td {
+      padding: 8px 4px;
+      vertical-align: middle;
+    }
+
+    /* Footer Stamp */
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #777777;
+      margin-top: 50px;
+      border-top: 1px solid #eeeeee;
+      padding-top: 15px;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    
-    <!-- Top Header Logo -->
-    <div class="logo-container">
-      <h1 class="logo-title">MAAME</h1>
-      <div class="logo-subtitle">surviving</div>
-    </div>
+  <!-- Header -->
+  <h1 class="header-title">M A A M E</h1>
+  <div class="sub-header">surviving &bull; last updated: November 25th</div>
 
-    <!-- Center Graphic & Multi-column Splash Layout -->
-    <div class="splash-layout">
-      
-      <!-- Left Column: Red Sphere & Vertical Nav -->
-      <div class="left-graphic">
-        <div class="red-sphere"></div>
-        <div class="left-nav">
-          <div class="left-nav-item"><span class="circled-letter">w</span>hat's new</div>
-          <div class="left-nav-item"><span class="circled-letter">f</span>orums</div>
-          <div class="left-nav-item"><span class="circled-letter">e</span>mail the band</div>
-          <div class="left-nav-item"><span class="circled-letter">n</span>ews from the band</div>
-        </div>
-      </div>
+  <!-- Navigation -->
+  <table class="nav-table">
+    <tr>
+      <td><a href="#news">NEWS</a></td>
+      <td><a href="#bio">BIOGRAPHY</a></td>
+      <td><a href="#music">DISCOGRAPHY</a></td>
+      <td><a href="#links">CONNECT</a></td>
+    </tr>
+  </table>
 
-      <!-- Center Square Artwork (Replace with your artwork image) -->
-      <div class="center-artwork">
-        [ Image Artwork ]
-      </div>
+  <!-- News Section -->
+  <a name="news"></a>
+  <div class="section-title">LATEST ANNOUNCEMENT</div>
+  <p>
+    Welcome to the archive. Work is currently underway on acoustic demos and upcoming vocal track sessions for the <i>Surviving</i> project.
+  </p>
 
-      <!-- Right Column: Gold Oval Navigation Overlay -->
-      <div class="right-nav">
-        <a href="#history" class="oval-btn">history</a>
-        <a href="#discography" class="oval-btn">discography</a>
-        <a href="#miscellaneous" class="oval-btn">miscellaneous</a>
-        <a href="#members" class="oval-btn">members</a>
-        <a href="#gallery" class="oval-btn">gallery</a>
-      </div>
+  <!-- Bio Section -->
+  <a name="bio"></a>
+  <div class="section-title">BIOGRAPHY</div>
+  <p>
+    Independent lead singer and songwriter based in the UK, blending pop, soul, R&B, and balladry into atmospheric soundscapes built around raw vocal resonance.
+  </p>
 
-    </div>
+  <!-- Audio Tracks Section -->
+  <a name="music"></a>
+  <div class="section-title">AUDIO DEMOS</div>
+  <table class="track-list">
+    <tr>
+      <td width="35%"><b>Surviving</b> (Acoustic)</td>
+      <td width="65%">
+        <audio controls style="width: 100%; height: 30px;">
+          <source src="surviving-demo.mp3" type="audio/mpeg">
+        </audio>
+      </td>
+    </tr>
+  </table>
 
-    <!-- Tagline Banner -->
-    <div class="tagline">
-      take a drive through <a href="#parking-lot">the digital parking lot...</a>
-    </div>
+  <!-- External Links -->
+  <a name="links"></a>
+  <div class="section-title">EXTERNAL LINKS</div>
+  <p>
+    &bull; <a href="https://spotify.com" target="_blank">Spotify Profile</a><br>
+    &bull; <a href="https://apple.com" target="_blank">Apple Music Profile</a><br>
+    &bull; <a href="https://youtube.com" target="_blank">YouTube Channel</a>
+  </p>
 
-    <!-- Bottom Footer Red Links & Timestamp -->
-    <div class="footer-nav">
-      <div class="footer-meta">
-        <a href="#credits">credits</a> &nbsp;&nbsp;&nbsp;&nbsp; lasted updated: November 25th
-      </div>
-      <div>
-        <a href="#whats-new">what's new</a>
-        <a href="#email">email the band</a>
-        <a href="#forums">forums</a>
-        <a href="#news">news from the band</a>
-      </div>
-      <div style="margin-top: 4px;">
-        <a href="#members">members</a>
-        <a href="#discography">discography</a>
-        <a href="#history">history</a>
-        <a href="#gallery">gallery</a>
-        <a href="#miscellaneous">miscellaneous</a>
-      </div>
-    </div>
-
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 1996-2026 MAAME. Hosted via GitHub Pages.
   </div>
 
 </body>
