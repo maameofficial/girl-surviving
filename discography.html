@@ -1,27 +1,152 @@
-<style>
-  details {
-    background-color: #111111;
-    border: 1px solid #222222;
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-  summary {
-    cursor: pointer;
-    font-weight: bold;
-    color: #cc0000;
-  }
-  .tracklist {
-    margin-top: 10px;
-    padding-left: 20px;
-    color: #cccccc;
-    font-size: 14px;
-  }
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Discography Section</title>
+  <style>
+    .discog-section {
+      max-width: 750px;
+      margin: 40px auto;
+      font-family: "Times New Roman", Times, serif;
+      color: #ffffff;
+    }
 
-<details>
-  <summary>SURVIVING (2026)</summary>
-  <ol class="tracklist">
-    <li>Surviving (Main Track)</li>
-    <li>Surviving (Acoustic Version)</li>
-  </ol>
-</details>
+    .discog-heading {
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #222222;
+      padding-bottom: 8px;
+    }
+
+    /* Container for the 2-column split layout */
+    .discog-split-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Column Styles */
+    .discog-col {
+      flex: 1; /* Gives equal 50% width to both sides */
+      background-color: #080808;
+      border: 1px solid #1a1a1a;
+      padding: 15px;
+      text-align: left;
+    }
+
+    .col-title {
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: #888888;
+      text-transform: uppercase;
+      border-bottom: 1px dotted #333333;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    /* Individual Track Block */
+    .track-entry {
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed #1a1a1a;
+    }
+
+    .track-entry:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .track-name {
+      font-weight: bold;
+      font-size: 16px;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .track-meta {
+      font-style: italic;
+      color: #666666;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    /* Styled Native HTML Audio Player */
+    audio {
+      width: 100%;
+      height: 32px;
+      filter: invert(100%) hue-rotate(180deg); /* Darkens default browser controls */
+    }
+
+    /* External Streaming Links */
+    .stream-links {
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .stream-links a:link { color: #cc0000; text-decoration: underline; }
+    .stream-links a:visited { color: #880000; }
+    .stream-links a:hover { color: #ffffff; background-color: #cc0000; }
+
+    /* Mobile Responsiveness: Stacks columns vertically on narrow screens */
+    @media (max-width: 600px) {
+      .discog-split-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="discog-section" id="discography">
+    <div class="discog-heading">[ DISCOGRAPHY ]</div>
+
+    <div class="discog-split-container">
+      
+      <!-- LEFT SIDE: DIRECT AUDIO PLAYER -->
+      <div class="discog-col">
+        <div class="col-title">&bull; LISTEN DIRECT &bull;</div>
+
+        <div class="track-entry">
+          <div class="track-name">Surviving</div>
+          <div class="track-meta">MP3 Preview &bull; 320 kbps</div>
+          <!-- Upload audio files to your repo/folder and update src path below -->
+          <audio controls preload="none">
+            <source src="audio/surviving.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <div class="track-entry">
+          <div class="track-name">Surviving (Acoustic)</div>
+          <div class="track-meta">MP3 Preview &bull; 320 kbps</div>
+          <audio controls preload="none">
+            <source src="audio/surviving-acoustic.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: EXTERNAL STREAMING LINKS -->
+      <div class="discog-col">
+        <div class="col-title">&bull; STREAM ONLINE &bull;</div>
+
+        <div class="track-entry">
+          <div class="track-name">Surviving (Single)</div>
+          <div class="track-meta">Released: 2026</div>
+          <div class="stream-links">
+            &bull; <a href="YOUR_SPOTIFY_LINK" target="_blank">Spotify</a><br>
+            &bull; <a href="YOUR_APPLE_MUSIC_LINK" target="_blank">Apple Music</a><br>
+            &bull; <a href="YOUR_BANDCAMP_LINK" target="_blank">Bandcamp</a><br>
+            &bull; <a href="YOUR_YOUTUBE_LINK" target="_blank">YouTube Music</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
