@@ -104,6 +104,23 @@
         flex-direction: column;
       }
     }
+
+  .return-home {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    font-size: 13px;
+    font-family: "Times New Roman", serif;
+    letter-spacing: 1px;
+  }
+  .return-home a {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  .return-home a:hover {
+    color: #cccccc; /* optional color change when hovering */
+  }
+</style>
+    
   </style>
 </head>
 <body>
@@ -153,9 +170,10 @@
     </div>
   </div>
 
-<!-- Return Home Link -->
-<div style="text-align: center; margin: 40px 0 20px 0; font-size: 13px; font-family: 'Times New Roman', serif; letter-spacing: 1px;">
-  [ <a href="index.html" style="color: #ffffff; text-decoration: underline;">RETURN HOME</a> ]
+<!-- Then use this in your HTML body: -->
+<div class="return-home">
+  [ <a href="index.html">RETURN HOME</a> ]
+
 </div>
 
 </body>
