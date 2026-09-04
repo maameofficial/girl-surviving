@@ -1,0 +1,27 @@
+<style>
+  details {
+    background-color: #111111;
+    border: 1px solid #222222;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #cc0000;
+  }
+  .tracklist {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #cccccc;
+    font-size: 14px;
+  }
+</style>
+
+<details>
+  <summary>SURVIVING (2026)</summary>
+  <ol class="tracklist">
+    <li>Surviving (Main Track)</li>
+    <li>Surviving (Acoustic Version)</li>
+  </ol>
+</details>
